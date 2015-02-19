@@ -1,6 +1,10 @@
 package android.test.com.testandroid;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.LayoutTransition;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -33,7 +37,7 @@ public class CollapseActivity extends ActionBarActivity {
 
 
         mCardEditCartaAssoc = findViewById(R.id.card_edit_carta_assoc);
-//        mCardNumCert = findViewById(R.id.card_edit_num_da_cert);
+        mCardNumCert = findViewById(R.id.card_edit_num_da_cert);
         mNumPP = (TextView) findViewById(R.id.num_pp);
         mNumPP.setText("**** **** **** 1234");
         mDataScadenza = (TextView) findViewById(R.id.data_scadenza);
@@ -55,18 +59,23 @@ public class CollapseActivity extends ActionBarActivity {
                     @Override
                     public void endTransition(LayoutTransition arg0, ViewGroup arg1, View arg2, int arg3) {
 
-                    }
+                        System.out.println("IIIIID : " + arg2.getId());
 
-                    @Override
-                    public void startTransition(LayoutTransition transition, ViewGroup container, View view, int transitionType) {
-                        if(view.getId() == mDataScadenza.getId()) {
+                        if(arg2.getId() == R.id.card_edit_carta_assoc) {
 
-                            Toast.makeText(CollapseActivity.this, view.getId()+"", Toast.LENGTH_SHORT).show();
+                            System.out.println("ANIMOOOOOOOOOOOOOOOOO - viwgroup id : " + arg1.getId());
+
+//                            Toast.makeText(CollapseActivity.this, arg2.getId()+"", Toast.LENGTH_SHORT).show();
 
 //                            inflate();
 
                             anima();
                         }
+                    }
+
+                    @Override
+                    public void startTransition(LayoutTransition transition, ViewGroup container, View view, int transitionType) {
+
                     }
                 });
             }
@@ -99,6 +108,19 @@ public class CollapseActivity extends ActionBarActivity {
 
 
     private void anima() {
+
+//        final ValueAnimator anim = ObjectAnimator.ofFloat(mCardNumCert, "x", 100f, 0f);
+//        anim.setDuration(250);
+//        anim.addListener(new AnimatorListenerAdapter() {
+//            public void onAnimationStart(Animator animation) {
+//                mCardNumCert.setVisibility(View.VISIBLE);
+////                anim.remove(((ObjectAnimator)animation).getTarget());
+//            }
+//        });
+//        anim.start();
+
+
+
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.slide_in_right);
         anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
