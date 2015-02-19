@@ -31,7 +31,7 @@ public class CollapseActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.card_layout);
 
-        mRoot = (LinearLayout)findViewById(R.id.root);
+
         mCardEditCartaAssoc = findViewById(R.id.card_edit_carta_assoc);
 //        mCardNumCert = findViewById(R.id.card_edit_num_da_cert);
         mNumPP = (TextView) findViewById(R.id.num_pp);
