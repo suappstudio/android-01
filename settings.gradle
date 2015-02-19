@@ -1,0 +1,5 @@
+include ':app'
+include ':posteAppCore'
+project(':posteAppCore').projectDir = new File('..//PosteAppLibs//android//PosteAppCore//trunk//app')
+include  ':menuLib'
+project(':menuLib').projectDir = new File('..//PosteAppLibs//android//MenuLib//trunk//menuLib')

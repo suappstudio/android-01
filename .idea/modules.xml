@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TestAndroid.iml" filepath="$PROJECT_DIR$/TestAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PosteAppLibs/android/MenuLib/trunk/menuLib/menuLib.iml" filepath="$PROJECT_DIR$/../PosteAppLibs/android/MenuLib/trunk/menuLib/menuLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PosteAppLibs/android/PosteAppCore/trunk/app/posteAppCore.iml" filepath="$PROJECT_DIR$/../PosteAppLibs/android/PosteAppCore/trunk/app/posteAppCore.iml" />
+    </modules>
+  </component>
+</project>
+
